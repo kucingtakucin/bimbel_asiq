@@ -1,9 +1,9 @@
 {
-    "name": "adamarthurf/arthur-framework",
+    "name": "adamarthurf/arthurframework",
     "type": "project",
     "description": "PHP Framework which is equivalent of the excalibur sword",
     "keywords": ["adam","arthur","framework"],
-    "homepage": "https://github.com/adamarthurf/arthur-framework",
+    "homepage": "https://github.com/adamarthurf/arthurframework",
     "license": "MIT",
     "authors": [
         {
