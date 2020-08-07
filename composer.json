@@ -1,0 +1,28 @@
+{
+    "name": "adamarthurf/arthur-framework",
+    "type": "project",
+    "description": "PHP Framework which is equivalent of the excalibur sword",
+    "keywords": ["adam","arthur","framework"],
+    "homepage": "https://github.com/adamarthurf/arthur-framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Arthur Faizal",
+            "email": "adam.faizal.af6@student.uns.ac.id",
+            "role": "Web Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "adamarthurf/framework": "^1.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Core\\": "System/Core"
+        }
+    }
+}
