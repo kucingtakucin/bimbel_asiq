@@ -1,2 +1,2 @@
-# siakadnya-arthur2-mvc.rf.gd
-Membuat web sistem akademik sederhana dengan PHP(MVC) &amp; MySQL. Web ini dibuat dengan bantuan Bootstrap. 
+# Arthur Framework
+PHP Framework which is equivalent of the excalibur sword
