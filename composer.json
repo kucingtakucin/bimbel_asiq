@@ -17,7 +17,7 @@
         "adamarthurf/framework": "^1.0"
     },
     "config": {
-        "optimize-autoloader": true,
+        "optimize-autoloader": true
     },
     "autoload": {
         "psr-4": {
