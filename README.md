@@ -1,2 +1,2 @@
 # Arthur Framework
-PHP Framework which is equivalent of the excalibur sword
+PHP Framework which is equivalent with the excalibur sword
