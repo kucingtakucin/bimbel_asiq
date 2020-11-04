@@ -10,15 +10,21 @@ class RegisterController extends Controller {
 
     /**
      * @inheritDoc
+     * @return void
      */
-    public function index(){
+    public function index(): void
+    {
         $data = [
             'title' => 'Register Page'
         ];
         $this->view('index', $data);
     }
 
-    public function register(): void {
+    /**
+     * @return void
+     */
+    public function register(): void
+    {
         try {
             if ($this->model('Users')->add()):
                 Flasher::set('Register', 'berhasil! ', 'Silakan login terlebih dahulu!', 'success');
@@ -31,5 +37,4 @@ class RegisterController extends Controller {
             exit(0);
         }
     }
-
 }

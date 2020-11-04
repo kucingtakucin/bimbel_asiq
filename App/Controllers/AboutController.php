@@ -5,6 +5,7 @@ class AboutController extends Controller {
 
     /**
      * @inheritDoc
+     * @return void
      */
     public function index(): void {
         // TODO: Implement index() method.

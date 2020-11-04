@@ -7,7 +7,8 @@ class MahasiswaModel extends Model {
      * @inheritDoc
      * @return int
      */
-    public function add(): int {
+    public function add(): int
+    {
         $query = "INSERT INTO {$this->tableName} (nama, nim, jurusan, angkatan, foto) VALUES (:nama, :nim, :jurusan, :angkatan, :foto)";
         $this->db->prepare($query);
         $this->db->bind('nama', htmlspecialchars(trim($_POST['nama'])));
@@ -23,7 +24,8 @@ class MahasiswaModel extends Model {
      * @inheritDoc
      * @return int
      */
-    public function save(): int {
+    public function save(): int
+    {
         $query = "UPDATE {$this->tableName} SET nama = :nama, nim = :nim, jurusan = :jurusan, angkatan = :angkatan, foto = :foto WHERE id = :id";
         $this->db->prepare($query);
         $this->db->bind('nama', htmlspecialchars(trim($_POST['nama'])));
@@ -45,7 +47,8 @@ class MahasiswaModel extends Model {
     /**
      * @return string
      */
-    public function upload_image(): string {
+    public function upload_image(): string
+    {
         $filename = $_FILES['foto']['name'];
         $filesize = $_FILES['foto']['size'];
         $errorfile = $_FILES['foto']['error'];
@@ -70,7 +73,11 @@ class MahasiswaModel extends Model {
         return $newfilename;
     }
 
-    public function look(): array {
+    /**
+     * @return array
+     */
+    public function look(): array
+    {
         $query = "SELECT * FROM {$this->tableName} WHERE nama LIKE :keyword OR nim LIKE :keyword OR jurusan LIKE :keyword OR angkatan LIKE :keyword";
         $keyword = $this->db->quote(htmlspecialchars(trim($_POST['keyword'])));
         $this->db->prepare($query);

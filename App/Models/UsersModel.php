@@ -3,6 +3,10 @@ use Core\App\Model;
 
 class UsersModel extends Model {
 
+    /**
+     * UsersModel constructor.
+     * @param $tableName
+     */
     public function __construct($tableName)
     {
         parent::__construct();
@@ -11,8 +15,10 @@ class UsersModel extends Model {
 
     /**
      * @inheritDoc
+     * @return int
      */
-    public function add(): int {
+    public function add(): int
+    {
         $firstname = $this->db->quote(htmlspecialchars(trim($_POST['firstname'])));
         $lastname = $this->db->quote(htmlspecialchars(trim($_POST['lastname'])));
         $username = "$firstname $lastname";
@@ -46,7 +52,11 @@ class UsersModel extends Model {
         // TODO: Implement save() method.
     }
 
-    public function check(): bool{
+    /**
+     * @return bool
+     */
+    public function check(): bool
+    {
         $query = "SELECT * FROM {$this->tableName} WHERE email = :email";
         $this->db->prepare($query);
         $this->db->bind('email', htmlspecialchars(trim($_POST['email'])));

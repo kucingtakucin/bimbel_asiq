@@ -49,14 +49,14 @@
                 foreach ($data['mahasiswa'] as $student):?>
                     <tr>
                         <th scope="row"><?= $i ?></th>
-                        <td><img src="<?= BASE_URL ?>Public/img/<?= $student['foto'] ?>" alt="<?= $student['nama']?>" width="100" class="img-fluid"></td>
+                        <td><img src="<?= BASE_URL ?>/Public/img/<?= $student['foto'] ?>" alt="<?= $student['nama']?>" width="100" class="img-fluid"></td>
                         <td><p><?= $student['nama'] ?></p></td>
                         <td><p><?= $student['nim'] ?></p></td>
                         <td><p><?= $student['jurusan'] ?></p></td>
                         <td><p><?= $student['angkatan'] ?></p></td>
                         <td class="d-flex flex-column align-items-center justify-content-center">
                             <h5><button type="button" class="btn badge badge-info mb-2 mt-3 detail" data-toggle="modal" data-target="#detailModal" data-id="<?= $student['id'] ?>">Detail</button></h5>
-                            <h5><a <?php if($_SESSION['role'] === '1'): ?>href="<?= BASE_URL ?>Mahasiswa/update/<?= $student['id'] ?>"<?php endif ?> class="badge badge-warning mt-2 mb-2 <?php if($_SESSION['role'] === '1'): ?>update<?php endif ?>" <?php if($_SESSION['role'] === '1'): ?>data-toggle="modal" data-target="#formModal" data-id="<?= $student['id'] ?>"<?php endif ?>>Update</a></h5>
+                            <h5><a <?php if($_SESSION['role'] === '1'): ?>href="<?= BASE_URL ?>/Mahasiswa/update/<?= $student['id'] ?>"<?php endif ?> class="badge badge-warning mt-2 mb-2 <?php if($_SESSION['role'] === '1'): ?>update<?php endif ?>" <?php if($_SESSION['role'] === '1'): ?>data-toggle="modal" data-target="#formModal" data-id="<?= $student['id'] ?>"<?php endif ?>>Update</a></h5>
                             <h5><button type="button" class="btn badge badge-danger mt-2 delete" <?php if($_SESSION['role'] === '1'): ?>data-toggle="modal" data-target="#deleteModal" data-id="<?= $student['id'] ?>"<?php endif ?>>Delete</button></h5>
                         </td>
                     </tr>
@@ -70,7 +70,7 @@
     <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="<?= BASE_URL ?>Mahasiswa/insert" method="post" enctype="multipart/form-data">
+                <form action="<?= BASE_URL ?>/Mahasiswa/insert" method="post" enctype="multipart/form-data">
                     <div class="modal-header">
                         <h5 class="modal-title" id="formModalLabel">Insert Data Mahasiswa</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -131,7 +131,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <a href="<?= BASE_URL ?>Mahasiswa/delete" class="btn btn-primary">Delete Data</a>
+                    <a href="<?= BASE_URL ?>/Mahasiswa/delete" class="btn btn-primary">Delete Data</a>
                 </div>
             </div>
         </div>

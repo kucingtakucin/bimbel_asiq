@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= /** @var array $data */ $data['title'] ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= BASE_URL ?>Public/css/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/Public/css/style.css">
     <style>
         @media (min-width: 992px) and (max-width: 1200px) {
             main .container h1.display-4.font-weight-bold {
@@ -243,18 +243,18 @@
                         <a class="nav-link" href="<?= BASE_URL ?>">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL ?>About">About</a>
+                        <a class="nav-link" href="<?= BASE_URL ?>/About">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL ?>Mahasiswa">Mahasiswa</a>
+                        <a class="nav-link" href="<?= BASE_URL ?>/Mahasiswa">Mahasiswa</a>
                     </li>
                 </ul>
                 <span class="navbar-text">
                     <?php if(isset($_SESSION['login'])): ?>
-                    <a href="index/logout" class="btn btn-outline-primary mt-0 mb-0">Logout</a>
+                    <a href="<?= BASE_URL ?>/index/logout" class="btn btn-outline-primary mt-0 mb-0">Logout</a>
                     <?php else: ?>
-                    <a href="Login" class="btn btn-outline-success mt-0 mb-0 mr-2">Login</a>
-                    <a href="Register" class="btn btn-outline-primary mt-0 mb-0 ml-2">Register</a>
+                    <a href="<?= BASE_URL ?>/Login" class="btn btn-outline-success mt-0 mb-0 mr-2">Login</a>
+                    <a href="<?= BASE_URL ?>/Register" class="btn btn-outline-primary mt-0 mb-0 ml-2">Register</a>
                     <?php endif ?>
                 </span>
             </div>

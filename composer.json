@@ -14,15 +14,15 @@
     ],
     "require": {
         "php": "^7.3",
-        "adamarthurf/framework": "^1.0"
+        "adamarthurf/framework": "^1.0",
+        "ext-json": "*"
     },
     "config": {
-        "optimize-autoloader": true,
+        "optimize-autoloader": true
     },
     "autoload": {
-        "psr-4": {
-            "App\\": "App/",
-            "Core\\": "System/Core"
-        }
+        "classmap": [
+            "App/"
+        ]
     }
 }

@@ -7,6 +7,9 @@ use Core\Helper\Flasher;
  */
 class MahasiswaController extends Controller {
 
+    /**
+     * MahasiswaController constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -19,8 +22,10 @@ class MahasiswaController extends Controller {
 
     /**
      * @inheritDoc
+     * @return void
      */
-    public function index(): void {
+    public function index(): void
+    {
         // TODO: Implement index() method.
         $data = [
             'title' => 'Daftar Mahasiswa',
@@ -29,7 +34,11 @@ class MahasiswaController extends Controller {
         $this->view('index', $data);
     }
 
-    public function show(): void {
+    /**
+     * @return void
+     */
+    public function show(): void
+    {
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
         if ($contentType === "application/json"):
             $content = trim(file_get_contents("php://input"));
@@ -49,7 +58,11 @@ class MahasiswaController extends Controller {
         endif;
     }
 
-    public function insert(): void {
+    /**
+     * @return void
+     */
+    public function insert(): void
+    {
         try {
             if ($this->model()->add() > 0):
                 Flasher::set('Data Mahasiswa','berhasil', 'ditambahkan!', 'success');
@@ -63,7 +76,11 @@ class MahasiswaController extends Controller {
         }
     }
 
-    public function update(): void {
+    /**
+     * @return void
+     */
+    public function update(): void
+    {
         try {
             if ($this->model()->save() > 0):
                 Flasher::set('Data Mahasiswa', 'berhasil', 'diupdate!', 'success');
@@ -79,8 +96,10 @@ class MahasiswaController extends Controller {
 
     /**
      * @param $id
+     * @return void
      */
-    public function delete($id): void {
+    public function delete($id): void
+    {
         try {
             if ($this->model()->remove($id) > 0):
                 Flasher::set('Data Mahasiswa', 'berhasil', 'dihapus!', 'success');

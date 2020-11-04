@@ -10,7 +10,7 @@
         <section id="main" class="d-flex flex-column align-items-center justify-content-center">
             <div class="card rounded-lg shadow-lg" style="width: 300px;">
                 <div class="card-body">
-                    <form action="<?= BASE_URL ?>Login/login" method="post">
+                    <form action="<?= BASE_URL ?>/Login/login" method="post">
                         <div class="form-row">
                             <div class="col-md-12 mb-3">
                                 <label for="email">Email</label>

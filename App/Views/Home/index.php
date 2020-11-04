@@ -8,7 +8,7 @@
                 <span class="badge badge-pill badge-light">Web Developer</span> | <span class="badge badge-pill badge-light">Mobile App Developer</span> | <span class="badge badge-pill badge-light">Cyber Security</span>
             </h4>
             <hr class="my-4 bg-white">
-            <a class="btn btn-light btn-lg font-weight-bold" href="<?= BASE_URL ?>About" role="button">About Me</a>
+            <a class="btn btn-light btn-lg font-weight-bold" href="<?= BASE_URL ?>/About" role="button">About Me</a>
         </div>
     </div>
 </main>

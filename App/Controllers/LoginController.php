@@ -9,15 +9,21 @@ class LoginController extends Controller {
 
     /**
      * @inheritDoc
+     * @return void
      */
-    public function index(){
+    public function index(): void
+    {
         $data = [
             'title' => 'Login Page'
         ];
         $this->view('index', $data);
     }
 
-    public function login(): void {
+    /**
+     * @return void
+     */
+    public function login(): void
+    {
         try {
             if ($this->model('Users')->check()):
                 Flasher::set('Login', 'berhasil', '', 'success');

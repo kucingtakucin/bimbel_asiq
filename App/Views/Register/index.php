@@ -10,7 +10,7 @@
         <section id="main" class="d-flex flex-column align-items-center justify-content-center">
             <div class="card rounded-lg shadow-lg" style="width: 500px;">
                 <div class="card-body">
-                    <form action="<?= BASE_URL ?>Register/register" method="post">
+                    <form action="<?= BASE_URL ?>/Register/register" method="post">
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstname">First name</label>

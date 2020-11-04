@@ -5,8 +5,10 @@ class HomeController extends Controller {
 
     /**
      * @inheritDoc
+     * @return void
      */
-    public function index(): void {
+    public function index(): void
+    {
         // TODO: Implement index() method.
         $data = [
             'title' => 'Home',
@@ -16,7 +18,11 @@ class HomeController extends Controller {
         $this->view('index', $data);
     }
 
-    public function logout(){
+    /**
+     * @return void
+     */
+    public function logout(): void
+    {
         session_start();
         session_unset();
         session_destroy();
