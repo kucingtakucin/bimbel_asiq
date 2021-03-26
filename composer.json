@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=7.2",
-        "adamarthurf/framework": "^1.0",
+        "adamarthurf/framework": "^1.7",
         "ext-json": "*"
     },
     "config": {
