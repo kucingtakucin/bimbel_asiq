@@ -13,8 +13,8 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
-        "adamarthurf/framework": "^1.7",
+        "php": ">=7.3",
+        "adamarthurf/framework": "^v2.1.8",
         "ext-json": "*"
     },
     "config": {

@@ -1,8 +1,8 @@
 <?php
-use Core\App\Model;
+use Arthur\Core\App\Model;
 
 class UsersModel extends Model {
-
+    public $passwordRegister;
     /**
      * UsersModel constructor.
      * @param $tableName
@@ -19,11 +19,11 @@ class UsersModel extends Model {
      */
     public function add(): int
     {
-        $firstname = $this->db->quote(htmlspecialchars(trim($_POST['firstname'])));
-        $lastname = $this->db->quote(htmlspecialchars(trim($_POST['lastname'])));
+        $firstname = htmlspecialchars(trim($_POST['firstname']));
+        $lastname = htmlspecialchars(trim($_POST['lastname']));
         $username = "$firstname $lastname";
-        $password = $this->db->quote(htmlspecialchars(trim($_POST['password'])));
-        $confirmpassword = $this->db->quote(htmlspecialchars(trim($_POST['confirmpassword'])));
+        $password = htmlspecialchars(trim($_POST['password']));
+        $confirmpassword = htmlspecialchars(trim($_POST['confirmpassword']));
 
         $query = "SELECT email FROM users WHERE email = :email";
         $this->db->prepare($query);
@@ -45,14 +45,6 @@ class UsersModel extends Model {
     }
 
     /**
-     * @inheritDoc
-     */
-    public function save(): int
-    {
-        // TODO: Implement save() method.
-    }
-
-    /**
      * @return bool
      */
     public function check(): bool
@@ -67,7 +59,7 @@ class UsersModel extends Model {
                 $_SESSION['login'] = true;
                 $_SESSION['username'] = $result['username'];
                 $_SESSION['role'] = $result['role'];
-                if (isset($_POST['rememberme'])):
+                if (isset($_POST['remember_me'])):
                     setcookie('key', base64_encode($result['id']), time() + (60 ** 2));
                     setcookie('value', hash('sha512', $result['username']), time() + (60 ** 2));
                 endif;

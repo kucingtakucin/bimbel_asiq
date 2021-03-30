@@ -1,5 +1,5 @@
 <?php
-use Core\App\Model;
+use Arthur\Core\App\Model;
 
 class MahasiswaModel extends Model {
 
@@ -69,7 +69,7 @@ class MahasiswaModel extends Model {
         endif;
 
         $newfilename = uniqid($prefixfilename, true) . ".$fileextension";
-        move_uploaded_file($tmpname, "img/$newfilename");
+        move_uploaded_file($tmpname, __DIR__ . "/../../Public/img/$newfilename");
         return $newfilename;
     }
 

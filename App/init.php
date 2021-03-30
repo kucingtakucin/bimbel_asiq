@@ -1,12 +1,16 @@
 <?php
 $method = explode('/', $_SERVER['REQUEST_URI']);
-define("BASE_URL", "http://{$_SERVER['SERVER_NAME']}/{$method[1]}");
+//if (!empty($method)) {
+    define("BASE_URL", "http://{$_SERVER['SERVER_NAME']}:{$_SERVER['SERVER_PORT']}/{$method[1]}");
+//} else {
+//    define("BASE_URL", "http://{$_SERVER['SERVER_NAME']}:{$_SERVER['SERVER_PORT']}");
+//}
 
 // Database Setup
 define("HOST", "localhost");
 define("USERNAME", "root");
-define("PASSWORD", "namaku123");
-define("DATABASE", "phpdasar");    
+define("PASSWORD", "");
+define("DATABASE", "arthur-framework");
     
 
 if (!session_id()) session_start();

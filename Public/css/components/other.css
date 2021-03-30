@@ -1,0 +1,14 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+header a.navbar-brand {
+    font-family: "Nunito", sans-serif;
+}
+
+main h1 {
+    font-family: "Nunito", sans-serif;
+}
+main tbody th, main tbody td {
+    height: 140px;
+}

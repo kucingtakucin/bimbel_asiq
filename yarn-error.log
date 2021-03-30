@@ -1,0 +1,32 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\PC-Mburi\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\PC-Mburi\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\PC-Mburi\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python39\Scripts;C:\Python39;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk-15.0.2\bin;C:\xampp\php;C:\composer;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Program Files\Git\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\xampp\mysql\bin;C:\Program Files\dotnet;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\PC-Mburi\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\PC-Mburi\AppData\Local\Programs\Python\Python38-32;C:\Users\PC-Mburi\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PhpStorm 2020.3.2\bin;C:\Program Files\JetBrains\WebStorm 2020.3.2\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\bin;C:\Users\PC-Mburi\AppData\Roaming\Composer\vendor\bin;C:\Users\PC-Mburi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\PC-Mburi\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Users\PC-Mburi\.dotnet\tools;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.15.5
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: Can't answer a question unless a user TTY
+      at ConsoleReporter.question (C:\Users\PC-Mburi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:96361:59)
+      at Object.<anonymous> (C:\Users\PC-Mburi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:88636:38)
+      at Generator.next (<anonymous>)
+      at step (C:\Users\PC-Mburi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\PC-Mburi\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+      at processTicksAndRejections (internal/process/task_queues.js:93:5)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

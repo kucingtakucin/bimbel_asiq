@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "86f124ff728592b21e549a5adc9bb8a5",
+    "packages": [
+        {
+            "name": "adamarthurf/framework",
+            "version": "v2.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AdamArthurF/framework.git",
+                "reference": "5965368e3b91c1e92e1ca8ee0489dc2056869bd6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AdamArthurF/framework/zipball/5965368e3b91c1e92e1ca8ee0489dc2056869bd6",
+                "reference": "5965368e3b91c1e92e1ca8ee0489dc2056869bd6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Arthur\\": "System/Arthur"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Arthur Faizal",
+                    "email": "adam.faizal.af6@student.uns.ac.id",
+                    "role": "Web Developer"
+                }
+            ],
+            "description": "System Core for Arthur Framework",
+            "homepage": "https://github.com/adamarthurf/framework",
+            "keywords": [
+                "adam",
+                "arthur",
+                "framework"
+            ],
+            "support": {
+                "issues": "https://github.com/AdamArthurF/framework/issues",
+                "source": "https://github.com/AdamArthurF/framework/tree/v2.1.8"
+            },
+            "time": "2021-03-30T09:35:46+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.3",
+        "ext-json": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

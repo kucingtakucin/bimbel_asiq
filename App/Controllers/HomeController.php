@@ -1,5 +1,5 @@
 <?php
-use Core\App\Controller;
+use Arthur\Core\App\Controller;
 
 class HomeController extends Controller {
 

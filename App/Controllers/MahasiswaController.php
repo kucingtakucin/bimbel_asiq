@@ -1,6 +1,6 @@
 <?php
-use Core\App\Controller;
-use Core\Helper\Flasher;
+use Arthur\Core\App\Controller;
+use Arthur\Core\Helper\Flasher;
 
 /**
  * @method model()
@@ -15,8 +15,7 @@ class MahasiswaController extends Controller {
         parent::__construct();
         if (!isset($_SESSION['login'])):
             Flasher::set('Silakan','login', 'terlebih dahulu!', 'warning');
-            header('Location: ' . BASE_URL . 'Login');
-            exit(0);
+            $this->redirect('/Login');
         endif;
     }
 
@@ -29,7 +28,7 @@ class MahasiswaController extends Controller {
         // TODO: Implement index() method.
         $data = [
             'title' => 'Daftar Mahasiswa',
-            'mahasiswa' => isset($_POST['keyword']) ? $this->model()->look() : $this->model()->all()
+            'mahasiswa' => $this->model()->all()
         ];
         $this->view('index', $data);
     }
@@ -58,22 +57,33 @@ class MahasiswaController extends Controller {
         endif;
     }
 
+    public function create(): void
+    {
+        $this->view('create', ['title' => 'Mahasiswa | Create']);
+    }
+
     /**
      * @return void
      */
     public function insert(): void
     {
         try {
-            if ($this->model()->add() > 0):
-                Flasher::set('Data Mahasiswa','berhasil', 'ditambahkan!', 'success');
-                header('Location: ' . BASE_URL . 'Mahasiswa');
-                exit(0);
-            endif;
+            $this->model()->add();
+            Flasher::set('Data Mahasiswa','berhasil', 'ditambahkan!', 'success');
+            $this->redirect('/Mahasiswa');
         } catch (Exception $exception) {
             Flasher::set('Data Mahasiswa', 'gagal', 'ditambahkan! ' . $exception->getMessage(), 'danger');
-            header('Location: ' . BASE_URL . 'Mahasiswa');
-            exit(0);
+            $this->redirect('/Mahasiswa');
         }
+    }
+
+    public function edit($id): void
+    {
+        $data = [
+            'title' => 'Mahasiswa | Edit',
+            'mahasiswa' => $this->model()->single($id)
+        ];
+        $this->view('edit', $data);
     }
 
     /**
@@ -82,15 +92,12 @@ class MahasiswaController extends Controller {
     public function update(): void
     {
         try {
-            if ($this->model()->save() > 0):
-                Flasher::set('Data Mahasiswa', 'berhasil', 'diupdate!', 'success');
-                header('Location: ' . BASE_URL . 'Mahasiswa');
-                exit(0);
-            endif;
+            $this->model()->save();
+            Flasher::set('Data Mahasiswa', 'berhasil', 'diupdate!', 'success');
+            $this->redirect('/Mahasiswa');
         } catch (Exception $exception) {
             Flasher::set('Data Mahasiswa', 'gagal', 'diupdate! ' . $exception->getMessage(), 'danger');
-            header('Location: ' . BASE_URL . 'Mahasiswa');
-            exit(0);
+            $this->redirect('/Mahasiswa');
         }
     }
 
@@ -103,12 +110,10 @@ class MahasiswaController extends Controller {
         try {
             if ($this->model()->remove($id) > 0):
                 Flasher::set('Data Mahasiswa', 'berhasil', 'dihapus!', 'success');
-                header('Location: ' . BASE_URL . 'Mahasiswa');
-                exit(0);
+                $this->redirect('/Mahasiswa');
             else:
                 Flasher::set('Data Mahasiswa', 'gagal', 'dihapus!', 'danger');
-                header('Location: ' . BASE_URL . 'Mahasiswa');
-                exit(0);
+                $this->redirect('/Mahasiswa');
             endif;
         } catch (Exception $exception) {
             echo "<h1>{$exception->getMessage()}</h1>";

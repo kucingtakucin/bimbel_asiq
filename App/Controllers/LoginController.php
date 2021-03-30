@@ -1,6 +1,6 @@
 <?php
-use Core\App\Controller;
-use Core\Helper\Flasher;
+use Arthur\Core\App\Controller;
+use Arthur\Core\Helper\Flasher;
 
 /**
  * @method model(string $string)
@@ -13,6 +13,9 @@ class LoginController extends Controller {
      */
     public function index(): void
     {
+        if (isset($_SESSION['login'])) {
+            $this->redirect('/Home');
+        }
         $data = [
             'title' => 'Login Page'
         ];
@@ -25,15 +28,13 @@ class LoginController extends Controller {
     public function login(): void
     {
         try {
-            if ($this->model('Users')->check()):
-                Flasher::set('Login', 'berhasil', '', 'success');
-                header('Location: ' . BASE_URL . 'Mahasiswa');
-                exit(0);
+            if ($this->model('users')->check()):
+                Flasher::set('Login', 'berhasil!', '', 'success');
+                $this->redirect('/Mahasiswa');
             endif;
         } catch (Exception $exception) {
             Flasher::set('Login', 'gagal! ', $exception->getMessage(), 'danger');
-            header('Location: ' . BASE_URL . 'Login');
-            exit(0);
+            $this->redirect('/Login');
         }
     }
 }

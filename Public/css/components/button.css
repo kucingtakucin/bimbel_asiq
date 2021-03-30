@@ -1,30 +1,3 @@
-/* Base */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-
-/*!* Components *!*/
-/*@import 'components/button.css';*/
-/*@import 'components/form.css';*/
-/*@import 'components/other.css';*/
-
-/* Utilities */
-@import 'tailwindcss/utilities';
-
-body {
-    font-family: "Nunito", sans-serif;
-}
-
-header a.navbar-brand {
-    font-family: "Nunito", sans-serif;
-}
-
-main h1 {
-    font-family: "Nunito", sans-serif;
-}
-main tbody th, main tbody td {
-    height: 140px;
-}
-
 .btn-indigo {
     @apply px-6 py-3 rounded bg-indigo-700 text-white text-sm font-bold whitespace-nowrap hover:bg-orange-500 focus:bg-orange-500;
 }
@@ -60,6 +33,3 @@ main tbody th, main tbody td {
         transform: rotate(360deg);
     }
 }
-
-
-

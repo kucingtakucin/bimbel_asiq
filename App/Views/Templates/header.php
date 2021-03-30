@@ -6,257 +6,58 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= /** @var array $data */ $data['title'] ?></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= BASE_URL ?>/Public/css/style.css">
-    <style>
-        @media (min-width: 992px) and (max-width: 1200px) {
-            main .container h1.display-4.font-weight-bold {
-                font-size: 50px;
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 992px) {
-            main .container h1.display-4.font-weight-bold {
-                font-size: 40px;
-            }
-
-            main .container #main table button.btn.badge {
-                margin: 0!important;
-                font-size: 15px;
-            }
-
-            main .container #main table a.badge {
-                margin: 0!important;
-                font-size: 15px;
-            }
-        }
-
-        @media (min-width: 576px) and (max-width: 768px) {
-            main .container h1.display-4.font-weight-bold {
-                font-size: 30px;
-            }
-
-            main .container #main table button.btn.badge {
-                margin: 0!important;
-                font-size: 15px;
-            }
-
-            main .container #main table a.badge {
-                margin: 0!important;
-                font-size: 13px;
-            }
-
-            main .container #main table td p {
-                font-size: 13px;
-            }
-
-            main .container #main table th {
-                font-size: 13px;
-            }
-
-            main .container p.lead {
-                font-size: 20px
-            }
-
-            main .container span.badge {
-                font-size: 15px;
-            }
-
-            main .container a.btn.btn-lg {
-                font-size: 18px;
-            }
-        }
-
-        @media (min-width: 425px) and (max-width: 576px) {
-            main .container h1.display-4.font-weight-bold {
-                font-size: 25px;
-            }
-
-            main .container h1.display-3.font-weight-bold {
-                font-size: 30px;
-            }
-
-            main .container p.lead {
-                font-size: 18px
-            }
-
-            main .container #main .card {
-                width: 400px!important;
-            }
-
-            main .container span.badge {
-                font-size: 13px;
-            }
-
-            main .container h4 {
-                font-size: 13px;
-            }
-
-            main .container a.btn.btn-lg {
-                font-size: 13px;
-            }
-
-            main .container #main table button.btn.badge {
-                margin: 0!important;
-                font-size: 13px;
-            }
-
-            main .container #main table a.badge {
-                margin: 0!important;
-                font-size: 13px;
-            }
-
-            main .container #main table td {
-                font-size: 13px;
-                padding: 8px!important;
-            }
-
-            main .container #main table th {
-                font-size: 13px;
-                padding: 8px!important;
-            }
-        }
-
-        @media (min-width: 320px) and (max-width: 425px) {
-            main .container h1.display-4.font-weight-bold {
-                font-size: 20px;
-            }
-
-            main .container h1.display-3.font-weight-bold {
-                font-size: 30px;
-            }
-
-            main .container p.lead {
-                font-size: 15px
-            }
-
-            main .container #main .card {
-                width: 300px!important;
-            }
-
-            main .container span.badge {
-                font-size: 10px;
-            }
-
-            main .container h3.mt-3 {
-                font-size: 25px;
-            }
-
-            main .container h4 {
-                font-size: 10px;
-            }
-
-            main .container a.btn.btn-lg {
-                font-size: 9px;
-            }
-
-            main .container #main table button.btn.badge {
-                margin: 0!important;
-                font-size: 9px;
-            }
-
-            main .container #main table a.badge {
-                margin: 0!important;
-                font-size: 9px;
-            }
-
-            main .container #main table td {
-                font-size: 9px;
-                padding: 6px!important;
-            }
-
-            main .container #main table th {
-                font-size: 9px;
-                padding: 6px!important;
-            }
-
-        }
-
-        @media (max-width: 320px) {
-            main .container h1.display-4.font-weight-bold {
-                font-size: 17px;
-            }
-
-            main .container p.lead {
-                font-size: 15px
-            }
-
-            main .container span.badge {
-                font-size: 10px;
-            }
-
-            main .container #main .card {
-                width: 275px!important;
-            }
-
-
-            main .container h4 {
-                font-size: 10px;
-            }
-
-            main .container a.btn.btn-lg {
-                font-size: 12px;
-            }
-
-            footer .container {
-                font-size: 15px;
-            }
-
-            main .container a.btn.btn-lg {
-                font-size: 9px;
-            }
-
-            main .container #main table button.btn.badge {
-                margin: 0!important;
-                font-size: 9px;
-            }
-
-            main .container #main table a.badge {
-                margin: 0!important;
-                font-size: 9px;
-            }
-
-            main .container #main table td {
-                font-size: 9px;
-                padding: 6px!important;
-            }
-
-            main .container #main table th {
-                font-size: 9px;
-                padding: 6px!important;
-            }
-        }
-
-    </style>
+    <link rel="icon" type="image/png" href="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/Public/css/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand font-weight-bold" href="<?= BASE_URL ?>">Arthur</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?= BASE_URL ?>">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL ?>/About">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= BASE_URL ?>/Mahasiswa">Mahasiswa</a>
-                    </li>
-                </ul>
-                <span class="navbar-text">
-                    <?php if(isset($_SESSION['login'])): ?>
-                    <a href="<?= BASE_URL ?>/index/logout" class="btn btn-outline-primary mt-0 mb-0">Logout</a>
-                    <?php else: ?>
-                    <a href="<?= BASE_URL ?>/Login" class="btn btn-outline-success mt-0 mb-0 mr-2">Login</a>
-                    <a href="<?= BASE_URL ?>/Register" class="btn btn-outline-primary mt-0 mb-0 ml-2">Register</a>
-                    <?php endif ?>
-                </span>
+    <nav>
+        <!-- This example requires Tailwind CSS v2.0+ -->
+        <div class="relative bg-white">
+            <div class="max-w-full mx-auto px-4 sm:px-6">
+                <div class="flex justify-between items-center border-b-2 border-gray-100 py-2 md:justify-start md:space-x-10">
+                    <div class="flex justify-start lg:w-0 lg:flex-1">
+                        <a href="<?= BASE_URL ?>">
+                            <span class="sr-only">Workflow</span>
+                            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="-mr-2 -my-2 md:hidden">
+                        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                            <span class="sr-only">Open menu</span>
+                            <!-- Heroicon name: outline/menu -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="hidden md:flex space-x-10">
+                        <a href="<?= BASE_URL ?>" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Home
+                        </a>
+                        <a href="<?= BASE_URL ?>/About" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                            About
+                        </a>
+                        <a href="<?= BASE_URL ?>/Mahasiswa" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Mahasiswa
+                        </a>
+                    </nav>
+                    <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                        <?php if(isset($_SESSION['login'])): ?>
+                            <a href="<?= BASE_URL ?>/index/logout" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                                Logout
+                            </a>
+                        <?php else: ?>
+                            <a href="<?= BASE_URL ?>/Login" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                                Login
+                            </a>
+                            <a href="<?= BASE_URL ?>/Register" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                                Register
+                            </a>
+                        <?php endif ?>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

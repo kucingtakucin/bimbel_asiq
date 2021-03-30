@@ -1,7 +1,7 @@
 <?php
 
-use Core\App\Controller;
-use Core\Helper\Flasher;
+use Arthur\Core\App\Controller;
+use Arthur\Core\Helper\Flasher;
 
 /**
  * @method model(string $string)
@@ -26,15 +26,13 @@ class RegisterController extends Controller {
     public function register(): void
     {
         try {
-            if ($this->model('Users')->add()):
+            if ($this->model('users')->add()):
                 Flasher::set('Register', 'berhasil! ', 'Silakan login terlebih dahulu!', 'success');
-                header('Location: ' . BASE_URL . 'Login');
-                exit(0);
+                $this->redirect('/Login');
             endif;
         } catch (Exception $exception) {
             Flasher::set('Register', 'gagal! ', $exception->getMessage(), 'danger');
-            header('Location: ' . BASE_URL . 'Register');
-            exit(0);
+            $this->redirect('/Register');
         }
     }
 }

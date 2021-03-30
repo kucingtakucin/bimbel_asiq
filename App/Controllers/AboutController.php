@@ -1,5 +1,5 @@
 <?php
-use Core\App\Controller;
+use Arthur\Core\App\Controller;
 
 class AboutController extends Controller {
 
