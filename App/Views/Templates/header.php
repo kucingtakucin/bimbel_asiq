@@ -39,9 +39,11 @@
                         <a href="<?= BASE_URL ?>/About" class="text-base font-medium text-gray-500 hover:text-gray-900">
                             About
                         </a>
+                        <?php if(isset($_SESSION['login'])):?>
                         <a href="<?= BASE_URL ?>/Mahasiswa" class="text-base font-medium text-gray-500 hover:text-gray-900">
                             Mahasiswa
                         </a>
+                        <?php endif ?>
                     </nav>
                     <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                         <?php if(isset($_SESSION['login'])): ?>
