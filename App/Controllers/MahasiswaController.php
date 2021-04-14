@@ -26,6 +26,7 @@ class MahasiswaController extends Controller {
     public function index(): void
     {
         // TODO: Implement index() method.
+        // Panggil model, ambil data, teruskan ke view
         $data = [
             'title' => 'Daftar Mahasiswa',
             'mahasiswa' => $this->model()->all()
