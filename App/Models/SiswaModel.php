@@ -9,7 +9,7 @@ class SiswaModel extends Model {
      */
     public function add(): int
     {
-        $query = "INSERT INTO {$this->tableName} (nama, nisn, jurusan, asal_sekolah, angkatan, foto) VALUES (:nama, :nisn, :jurusan, :asal_sekolah :angkatan, :foto)";
+        $query = "INSERT INTO {$this->tableName} (nama, nisn, jurusan, asal_sekolah, angkatan, foto) VALUES (:nama, :nisn, :jurusan, :asal_sekolah, :angkatan, :foto)";
         $this->db->prepare($query);
         $this->db->bind('nama', htmlspecialchars(trim($_POST['nama'])));
         $this->db->bind('nisn', htmlspecialchars(trim($_POST['nisn'])));

@@ -26,7 +26,7 @@ class RegisterController extends Controller {
     public function register(): void
     {
         try {
-            if ($this->model('users')->add()):
+            if ($this->model('Users')->add()):
                 Flasher::set('Register', 'berhasil! ', 'Silakan login terlebih dahulu!', 'success');
                 $this->redirect('/Login');
             endif;

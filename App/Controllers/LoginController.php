@@ -28,7 +28,7 @@ class LoginController extends Controller {
     public function login(): void
     {
         try {
-            if ($this->model('users')->check()):
+            if ($this->model('Users')->check()):
                 Flasher::set('Login', 'berhasil!', '', 'success');
                 $this->redirect('/Siswa');
             endif;

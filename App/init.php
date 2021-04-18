@@ -9,8 +9,8 @@ $method = explode('/', $_SERVER['REQUEST_URI']);
 // Database Setup
 define("HOST", "localhost");
 define("USERNAME", "root");
-define("PASSWORD", "");
-define("DATABASE", "bisiq2");
+define("PASSWORD", "namaku123");
+define("DATABASE", "bisiq");
     
 
 if (!session_id()) session_start();

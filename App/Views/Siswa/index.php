@@ -78,8 +78,8 @@
                                         <td class="px-6 py-1 whitespace-nowrap text-center text-lg font-medium">
                                             <a href="<?= BASE_URL ?>/Siswa/edit/<?= $student['id'] ?>" class="text-indigo-600 font-bold hover:text-indigo-900 mr-8">Edit</a>
                                             <?php if($_SESSION['role'] === '1'): ?>
-                                                <form action="<?= BASE_URL ?>/Siswa/delete/<?= $student['id'] ?>" id="form-hapus" class="inline">
-                                                    <button type="submit" class="text-indigo-600 font-bold hover:text-indigo-900" id="tombol-hapus">Delete</button>
+                                                <form action="<?= BASE_URL ?>/Siswa/delete/<?= $student['id'] ?>" class="inline form-hapus">
+                                                    <button type="submit" class="text-indigo-600 font-bold hover:text-indigo-900 tombolhapus">Delete</button>
                                                 </form>
                                             <?php endif ?>
                                         </td>

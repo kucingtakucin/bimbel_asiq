@@ -60,7 +60,7 @@
                                             <a href="<?= BASE_URL ?>/Guru/edit/<?= $teacher['id'] ?>" class="text-indigo-600 font-bold hover:text-indigo-900 mr-8">Edit</a>
                                             <?php if($_SESSION['role'] === '1'): ?>
                                                 <form action="<?= BASE_URL ?>/Guru/delete/<?= $teacher['id'] ?>" id="form-hapus" class="inline">
-                                                    <button type="submit" class="text-indigo-600 font-bold hover:text-indigo-900" id="tombol-hapus">Delete</button>
+                                                    <button type="submit" class="text-indigo-600 font-bold hover:text-indigo-900 tombolhapus">Delete</button>
                                                 </form>
                                             <?php endif ?>
                                         </td>
