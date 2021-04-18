@@ -9,7 +9,12 @@ class GuruModel extends Model {
      */
     public function add(): int
     {
-       return 0;
+        $query = "INSERT INTO {$this->tableName} (id, nama) VALUES (:id, :nama)";
+        $this->db->prepare($query);
+        $this->db->bind('id', htmlspecialchars(trim($_POST['id'])));
+        $this->db->bind('nama', htmlspecialchars(trim($_POST['nama'])));
+        $this->db->execute();
+        return $this->db->rowCount();
     }
 
     /**
@@ -18,7 +23,12 @@ class GuruModel extends Model {
      */
     public function save(): int
     {
-        return 0;
+        $query = "UPDATE {$this->tableName} SET nama = :nama WHERE id = :id";
+        $this->db->prepare($query);
+        $this->db->bind('id', htmlspecialchars(trim($_POST['id'])));
+        $this->db->bind('nama', htmlspecialchars(trim($_POST['nama'])));
+        $this->db->execute();
+        return $this->db->rowCount();
     }
 
     /**
@@ -34,6 +44,11 @@ class GuruModel extends Model {
      */
     public function look(): array
     {
-       return [];
+        $query = "SELECT * FROM {$this->tableName} WHERE nama LIKE :keyword OR id LIKE :keyword;
+        $keyword = $this->db->quote(htmlspecialchars(trim($_POST['keyword'])));
+        $this->db->prepare($query);
+        $this->db->bind('keyword', "%$keyword%");
+        $this->db->execute();
+        return $this->db->fetchAll();
     }
 }
