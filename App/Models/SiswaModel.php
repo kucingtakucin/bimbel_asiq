@@ -1,7 +1,7 @@
 <?php
 use Arthur\Core\App\Model;
 
-class MahasiswaModel extends Model {
+class SiswaModel extends Model {
 
     /**
      * @inheritDoc
@@ -9,11 +9,12 @@ class MahasiswaModel extends Model {
      */
     public function add(): int
     {
-        $query = "INSERT INTO {$this->tableName} (nama, nim, jurusan, angkatan, foto) VALUES (:nama, :nim, :jurusan, :angkatan, :foto)";
+        $query = "INSERT INTO {$this->tableName} (nama, nisn, jurusan, asal_sekolah, angkatan, foto) VALUES (:nama, :nisn, :jurusan, :asal_sekolah :angkatan, :foto)";
         $this->db->prepare($query);
         $this->db->bind('nama', htmlspecialchars(trim($_POST['nama'])));
-        $this->db->bind('nim', htmlspecialchars(trim($_POST['nim'])));
+        $this->db->bind('nisn', htmlspecialchars(trim($_POST['nisn'])));
         $this->db->bind('jurusan', htmlspecialchars(trim($_POST['jurusan'])));
+        $this->db->bind('asal_sekolah', htmlspecialchars(trim($_POST['asal_sekolah'])));
         $this->db->bind('angkatan', htmlspecialchars(trim($_POST['angkatan'])));
         $this->db->bind('foto', $this->upload_image());
         $this->db->execute();
@@ -26,11 +27,12 @@ class MahasiswaModel extends Model {
      */
     public function save(): int
     {
-        $query = "UPDATE {$this->tableName} SET nama = :nama, nim = :nim, jurusan = :jurusan, angkatan = :angkatan, foto = :foto WHERE id = :id";
+        $query = "UPDATE {$this->tableName} SET nama = :nama, nisn = :nisn, jurusan = :jurusan, asal_sekolah = :asal_sekolah, angkatan = :angkatan, foto = :foto WHERE id = :id";
         $this->db->prepare($query);
         $this->db->bind('nama', htmlspecialchars(trim($_POST['nama'])));
-        $this->db->bind('nim', htmlspecialchars(trim($_POST['nim'])));
+        $this->db->bind('nisn', htmlspecialchars(trim($_POST['nisn'])));
         $this->db->bind('jurusan', htmlspecialchars(trim($_POST['jurusan'])));
+        $this->db->bind('asal_sekolah', htmlspecialchars(trim($_POST['asal_sekolah'])));
         $this->db->bind('angkatan', htmlspecialchars(trim($_POST['angkatan'])));
         $fotolama = $_POST['fotolama'];
         if ($_FILES['foto']['error'] === 4) {
@@ -78,7 +80,7 @@ class MahasiswaModel extends Model {
      */
     public function look(): array
     {
-        $query = "SELECT * FROM {$this->tableName} WHERE nama LIKE :keyword OR nim LIKE :keyword OR jurusan LIKE :keyword OR angkatan LIKE :keyword";
+        $query = "SELECT * FROM {$this->tableName} WHERE nama LIKE :keyword OR nisn LIKE :keyword OR jurusan LIKE :keyword OR angkatan LIKE :keyword";
         $keyword = $this->db->quote(htmlspecialchars(trim($_POST['keyword'])));
         $this->db->prepare($query);
         $this->db->bind('keyword', "%$keyword%");

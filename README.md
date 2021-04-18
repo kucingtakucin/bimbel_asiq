@@ -1,5 +1,5 @@
-# Arthur Framework
-PHP Framework which is equivalent with the excalibur sword
+# Bimbel ASIQ
+Bersama BISIQ, belajar makin ASIQ
 
 ## Documentation
 <ol>

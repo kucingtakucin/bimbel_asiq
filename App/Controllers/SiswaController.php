@@ -5,10 +5,10 @@ use Arthur\Core\Helper\Flasher;
 /**
  * @method model()
  */
-class MahasiswaController extends Controller {
+class SiswaController extends Controller {
 
     /**
-     * MahasiswaController constructor.
+     * SiswaController constructor.
      */
     public function __construct()
     {
@@ -28,8 +28,8 @@ class MahasiswaController extends Controller {
         // TODO: Implement index() method.
         // Panggil model, ambil data, teruskan ke view
         $data = [
-            'title' => 'Daftar Mahasiswa',
-            'mahasiswa' => $this->model()->all()
+            'title' => 'Daftar Siswa',
+            'siswa' => $this->model()->all()
         ];
         $this->view('index', $data);
     }
@@ -60,7 +60,7 @@ class MahasiswaController extends Controller {
 
     public function create(): void
     {
-        $this->view('create', ['title' => 'Mahasiswa | Create']);
+        $this->view('create', ['title' => 'Siswa | Create']);
     }
 
     /**
@@ -70,19 +70,19 @@ class MahasiswaController extends Controller {
     {
         try {
             $this->model()->add();
-            Flasher::set('Data Mahasiswa','berhasil', 'ditambahkan!', 'success');
-            $this->redirect('/Mahasiswa');
+            Flasher::set('Data Siswa','berhasil', 'ditambahkan!', 'success');
+            $this->redirect('/Siswa');
         } catch (Exception $exception) {
-            Flasher::set('Data Mahasiswa', 'gagal', 'ditambahkan! ' . $exception->getMessage(), 'danger');
-            $this->redirect('/Mahasiswa');
+            Flasher::set('Data Siswa', 'gagal', 'ditambahkan! ' . $exception->getMessage(), 'danger');
+            $this->redirect('/Siswa');
         }
     }
 
     public function edit($id): void
     {
         $data = [
-            'title' => 'Mahasiswa | Edit',
-            'mahasiswa' => $this->model()->single($id)
+            'title' => 'Siswa | Edit',
+            'siswa' => $this->model()->single($id)
         ];
         $this->view('edit', $data);
     }
@@ -94,11 +94,11 @@ class MahasiswaController extends Controller {
     {
         try {
             $this->model()->save();
-            Flasher::set('Data Mahasiswa', 'berhasil', 'diupdate!', 'success');
-            $this->redirect('/Mahasiswa');
+            Flasher::set('Data Siswa', 'berhasil', 'diupdate!', 'success');
+            $this->redirect('/Siswa');
         } catch (Exception $exception) {
-            Flasher::set('Data Mahasiswa', 'gagal', 'diupdate! ' . $exception->getMessage(), 'danger');
-            $this->redirect('/Mahasiswa');
+            Flasher::set('Data Siswa', 'gagal', 'diupdate! ' . $exception->getMessage(), 'danger');
+            $this->redirect('/Siswa');
         }
     }
 
@@ -110,11 +110,11 @@ class MahasiswaController extends Controller {
     {
         try {
             if ($this->model()->remove($id) > 0):
-                Flasher::set('Data Mahasiswa', 'berhasil', 'dihapus!', 'success');
-                $this->redirect('/Mahasiswa');
+                Flasher::set('Data Siswa', 'berhasil', 'dihapus!', 'success');
+                $this->redirect('/Siswa');
             else:
-                Flasher::set('Data Mahasiswa', 'gagal', 'dihapus!', 'danger');
-                $this->redirect('/Mahasiswa');
+                Flasher::set('Data Siswa', 'gagal', 'dihapus!', 'danger');
+                $this->redirect('/Siswa');
             endif;
         } catch (Exception $exception) {
             echo "<h1>{$exception->getMessage()}</h1>";

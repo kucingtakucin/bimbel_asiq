@@ -10,7 +10,7 @@ $method = explode('/', $_SERVER['REQUEST_URI']);
 define("HOST", "localhost");
 define("USERNAME", "root");
 define("PASSWORD", "");
-define("DATABASE", "arthur-framework");
+define("DATABASE", "bisiq");
     
 
 if (!session_id()) session_start();

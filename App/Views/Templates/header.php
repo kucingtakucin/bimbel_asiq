@@ -40,8 +40,14 @@
                             About
                         </a>
                         <?php if(isset($_SESSION['login'])):?>
-                        <a href="<?= BASE_URL ?>/Mahasiswa" class="text-base font-medium text-gray-500 hover:text-gray-900">
-                            Mahasiswa
+                        <a href="<?= BASE_URL ?>/Siswa" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Siswa
+                        </a>
+                        <a href="<?= BASE_URL ?>/Guru" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Guru
+                        </a>
+                        <a href="<?= BASE_URL ?>/Mapel" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                            Mapel
                         </a>
                         <?php endif ?>
                     </nav>

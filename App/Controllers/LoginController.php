@@ -30,7 +30,7 @@ class LoginController extends Controller {
         try {
             if ($this->model('users')->check()):
                 Flasher::set('Login', 'berhasil!', '', 'success');
-                $this->redirect('/Mahasiswa');
+                $this->redirect('/Siswa');
             endif;
         } catch (Exception $exception) {
             Flasher::set('Login', 'gagal! ', $exception->getMessage(), 'danger');
