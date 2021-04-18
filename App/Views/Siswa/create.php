@@ -17,7 +17,7 @@
   ```
 -->
         <h1 class="text-5xl font-bold mt-5">
-            Form Mahasiswa
+            Form Siswa
         </h1>
 
         <div class="hidden sm:block" aria-hidden="true">
@@ -32,40 +32,41 @@
                     <div class="px-4 sm:px-0">
                         <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
                         <p class="mt-1 text-sm text-gray-600">
-                            Data Mahasiswa
+                            Data Siswa
                         </p>
                     </div>
                 </div>
                 <div class="mt-5 md:mt-0 md:col-span-2">
-                    <form action="<?= BASE_URL ?>/Mahasiswa/update/<?=  /** @var array $data */ $data['mahasiswa']['id'] ?>" method="POST" enctype="multipart/form-data">
+                    <form action="<?= BASE_URL ?>/Siswa/insert" method="POST" enctype="multipart/form-data">
                         <div class="shadow overflow-hidden sm:rounded-md">
                             <div class="px-4 py-5 bg-white sm:p-6">
                                 <div class="grid grid-cols-6 gap-6">
                                     <div class="col-span-6 sm:col-span-2">
-                                        <label for="nim" class="block text-sm font-medium text-gray-700">NIM</label>
-                                        <input type="text" name="nim" id="nim" value="<?=
-                                        $data['mahasiswa']['nim'] ?>" autocomplete="off" required class="form-input px-4 py-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        <label for="nisn" class="block text-sm font-medium text-gray-700">NISN</label>
+                                        <input type="text" name="nisn" id="nisn" autocomplete="off" required class="form-input px-4 py-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-4">
                                         <label for="nama" class="block text-sm  font-medium text-gray-700">Nama Lengkap</label>
-                                        <input type="text" name="nama" id="nama" value="<?= $data['mahasiswa']['nama'] ?>" autocomplete="off" required class="form-input px-4 py-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        <input type="text" name="nama" id="nama" autocomplete="off" required class="form-input px-4 py-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-2">
+                                        <label for="asal_sekolah" class="block text-sm font-medium text-gray-700">Asal Sekolah</label>
+                                        <input type="text" name="asal_sekolah" id="asal_sekolah" autocomplete="off" required class="form-input px-4 py-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                     </div>
 
                                     <div class="col-span-6 sm:col-span-2">
                                         <label for="angkatan" class="block text-sm font-medium text-gray-700">Angkatan</label>
-                                        <input type="text" name="angkatan" id="angkatan" value="<?= $data['mahasiswa']['angkatan'] ?>" autocomplete="off" required class="form-input px-4 py-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        <input type="text" name="angkatan" id="angkatan" autocomplete="off" required class="form-input px-4 py-2 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                     </div>
 
-                                    <div class="col-span-6 sm:col-span-4">
+                                    <div class="col-span-6 sm:col-span-2">
                                         <label for="jurusan" class="block text-sm font-medium text-gray-700">Jurusan</label>
                                         <select id="jurusan" name="jurusan" autocomplete="off" required class="form-select mt-1 block w-full px-4 py-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                                            <option value="<?= $data['mahasiswa']['jurusan'] ?>" selected><?= $data['mahasiswa']['jurusan'] ?></option>
-                                            <option value="Teknik Informatika">Teknik Informatika</option>
-                                            <option value="Matematika">Matematika</option>
-                                            <option value="Fisika">Fisika</option>
-                                            <option value="Kimia">Kimia</option>
-                                            <option value="Biologi">Biologi</option>
+                                            <option></option>
+                                            <option value="SAINTEK">SAINTEK</option>
+                                            <option value="SOSHUM">SOSHUM</option>
                                         </select>
                                     </div>
 
@@ -73,10 +74,12 @@
                                         <label class="block text-sm font-medium text-gray-700">
                                             Photo
                                         </label>
-                                        <div class="mt-1 flex items-center">
-                                            <div class="inline-block h-60 rounded-full overflow-hidden bg-gray-100">
-                                                <img src="<?= BASE_URL?>/Public/img/<?= $data['mahasiswa']['foto'] ?>" alt="<?= $data['mahasiswa']['nama'] ?>" class="h-60">
-                                            </div>
+                                            <div class="mt-1 flex items-center">
+                                        <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                                          <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                          </svg>
+                                        </span>
                                             <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                                 Change
                                             </button>
@@ -94,7 +97,7 @@
                                                     <div class="flex text-sm text-gray-600">
                                                         <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                             <span>Upload a file</span>
-                                                            <input id="file-upload" name="foto" type="file" class="sr-only">
+                                                            <input id="file-upload" name="foto" type="file" required class="sr-only">
                                                         </label>
                                                         <p class="pl-1">or drag and drop</p>
                                                     </div>
@@ -104,8 +107,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="id" value="<?= $data['mahasiswa']['id'] ?>">
-                                        <input type="hidden" name="fotolama" value="<?= $data['mahasiswa']['foto'] ?>">
                                     </div>
                                 </div>
                             </div>

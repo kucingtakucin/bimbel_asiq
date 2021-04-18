@@ -11,9 +11,7 @@ class HomeController extends Controller {
     {
         // TODO: Implement index() method.
         $data = [
-            'title' => 'Home',
-            'nama' => 'Adam',
-            'panggil' => 'Arthur'
+            'title' => 'Home'
         ];
         $this->view('index', $data);
     }

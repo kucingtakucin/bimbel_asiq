@@ -12,7 +12,12 @@ class GuruController extends Controller {
      */
     public function __construct()
     {
-        
+        parent::__construct();
+        // Untuk mengecek apakah user sudah login atau belum
+        if (!isset($_SESSION['login'])):
+            Flasher::set('Silakan','login', 'terlebih dahulu!', 'warning');
+            $this->redirect('/Login');
+        endif;
     }
 
     /**
@@ -21,7 +26,8 @@ class GuruController extends Controller {
      */
     public function index(): void
     {
-       
+        $data['title'] = "Guru";
+        $this->view('index', $data);
     }
 
     /**

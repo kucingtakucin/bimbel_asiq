@@ -5,7 +5,7 @@ use Arthur\Core\Helper\Flasher;
 /**
  * @method model()
  */
-class MapelController extends Controller {
+class MateriController extends Controller {
 
     /**
      * MahasiswaController constructor.
@@ -26,7 +26,7 @@ class MapelController extends Controller {
      */
     public function index(): void
     {
-        $data['title'] = 'Mapel';
+        $data['title'] = "Materi";
         $this->view('index', $data);
     }
 
@@ -35,11 +35,12 @@ class MapelController extends Controller {
      */
     public function show(): void
     {
-       
+
     }
 
     public function create(): void
     {
+
     }
 
     /**
@@ -47,12 +48,12 @@ class MapelController extends Controller {
      */
     public function insert(): void
     {
-        
+
     }
 
     public function edit($id): void
     {
-       
+
     }
 
     /**
@@ -60,7 +61,7 @@ class MapelController extends Controller {
      */
     public function update(): void
     {
-        
+
     }
 
     /**
@@ -69,6 +70,6 @@ class MapelController extends Controller {
      */
     public function delete($id): void
     {
-       
+
     }
 }
