@@ -23,6 +23,9 @@
                                         No
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Foto
+                                    </th>
+                                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Kode Guru
                                     </th>
                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -40,6 +43,13 @@
                                 foreach ($data['guru'] as $teacher):?>
                                     <tr>
                                         <th scope="row"><?= $i ?></th>
+                                        <td class="px-6 py-1 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="flex-shrink-0 h-36">
+                                                    <img class="h-36 rounded-full" src="<?= BASE_URL ?>/Public/img/<?= $teacher['foto'] ?>" alt="<?= $teacher['nama']?>">
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td class="px-6 py-1 whitespace-nowrap">
                                             <div class="text-sm text-gray-900"><?= $teacher['kode_guru'] ?></div>
                                         </td>
