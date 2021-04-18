@@ -9,13 +9,10 @@ class GuruController extends Controller {
     /**
      * MahasiswaController constructor.
      */
-    public function __construct()
+    public function __construct($id="112233", $nama="anonim")
     {
-        parent::__construct();
-        if (!isset($_SESSION['login'])):
-            Flasher::set('Silakan','login', 'terlebih dahulu!', 'warning');
-            $this->redirect('/Login');
-        endif;
+        $this->id = $id;
+        $this->nama = $nama;       
     }
 
     /**
