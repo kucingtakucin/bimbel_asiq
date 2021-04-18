@@ -2,7 +2,9 @@ const $ = require('jquery');
 const Swal = require('sweetalert2');
 
 $(document).ready(function () {
-    $('#tombol-hapus').click(function (event){
+    $('.tombolhapus').click(function (event){
+        event.stopPropagation();
+        event.stopImmediatePropagation();
         event.preventDefault();
         Swal.fire({
             title: 'Are you sure?',
